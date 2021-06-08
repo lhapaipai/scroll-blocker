@@ -1,4 +1,10 @@
-# ScrollBlocker : disable the scrollbar (for a Modal Box use case)
+# ScrollBlocker : disable the scrollbar
+
+use case :
+
+- for a Modal Box
+
+## Configuration
 
 ```js
 import { disableScroll, enableScroll } from "scroll-blocker";
@@ -25,17 +31,17 @@ app.directive("scroll-lock", scrollLockDirective);
 app.mount(document.querySelector("#app"));
 ```
 
-```js
-// note that the target element is not the FileManager but
-// the #el-to-lock or document.body if no value
-<FileManager v-scroll-lock:active />
-<FileManager v-scroll-lock:active="'#el-to-lock'">
+```html
+<!-- note that the target element is not the FileManager but
+the #el-to-lock or document.body if no value -->
+<file-manager v-scroll-lock:active />
+<file-manager v-scroll-lock:active="'#el-to-lock'" />
 ```
 
 TODO:
 for the moment does not manage the change of state.
 
-```js
-<FileManager v-scroll-lock:[isActive] />
-<FileManager v-scroll-lock:[isActive]="'#el-to-lock'">
+```html
+<file-manager v-scroll-lock:[isActive] />
+<file-manager v-scroll-lock:[isActive]="'#el-to-lock'" />
 ```
